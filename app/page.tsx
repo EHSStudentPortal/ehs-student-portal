@@ -8,8 +8,9 @@ import StaffDirectory from './components/StaffDirectory';
 import ClassDirectory from './components/ClassDirectory';
 import SchoolVoice from './components/SchoolVoice';
 import Hero from './components/Hero';
+import LunchMenu from './components/LunchMenu';
 
-type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice';
+type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>('home');
@@ -79,6 +80,7 @@ export default function Home() {
         {activeTab === 'staff' && <StaffDirectory />}
         {activeTab === 'classes' && <ClassDirectory />}
         {activeTab === 'voice' && <SchoolVoice />}
+        {activeTab === 'lunch' && <LunchMenu />}
       </main>
 
       {/* Footer */}

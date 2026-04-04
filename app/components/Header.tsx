@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { standardSchedule, minimumDaySchedule, timeToMinutes, formatTime } from '@/data/schedule';
 
-type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice';
+type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch';
 
 interface HeaderProps {
   activeTab: Tab;
@@ -120,6 +120,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'map', label: 'Campus Map', icon: '◈' },
   { id: 'staff', label: 'Staff', icon: '◉' },
   { id: 'classes', label: 'Courses', icon: '◫' },
+  { id: 'lunch', label: 'Lunch Menu', icon: '◍' },
   { id: 'voice', label: 'SchoolVoice', icon: '◌' },
 ];
 
