@@ -596,3 +596,97 @@ code, pre, .font-mono {
   .font-dm-sans { font-family: var(--font-dm-sans), system-ui, sans-serif; }
   .font-dm-mono { font-family: var(--font-dm-mono), monospace; }
 }
+
+/* ==========================================
+   ACCESSIBILITY (WCAG 2.1 AA)
+   ========================================== */
+
+/* Skip to main content link */
+.skip-nav {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-nav:focus {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: auto;
+  height: auto;
+  padding: 12px 20px;
+  background: #059669;
+  color: white;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+/* Visible focus ring on all interactive elements */
+:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Ensure buttons and links have pointer cursor */
+button, [role="button"], a {
+  cursor: pointer;
+}
+
+/* High-contrast mode overrides */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #1a1a1a;
+    --text-muted: #333333;
+    --border-light: rgba(0,0,0,0.4);
+    --border-medium: rgba(0,0,0,0.6);
+    --bg-card: #ffffff;
+  }
+  .dark {
+    --text-primary: #ffffff;
+    --text-secondary: #f0f0f0;
+    --text-muted: #d0d0d0;
+    --border-light: rgba(255,255,255,0.4);
+    --bg-card: #0a0a0a;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Search palette animation */
+@keyframes paletteIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-palette-in {
+  animation: paletteIn 0.15s ease both;
+}
+
+/* Screen-reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -9,17 +9,30 @@ import ClassDirectory from './components/ClassDirectory';
 import SchoolVoice from './components/SchoolVoice';
 import Hero from './components/Hero';
 import LunchMenu from './components/LunchMenu';
+import SchoolCalendar from './components/SchoolCalendar';
+import ResourcesHub from './components/ResourcesHub';
+import SearchPalette from './components/SearchPalette';
 
-type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch';
+type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch' | 'calendar' | 'resources';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>('home');
   const [showBanner, setShowBanner] = useState(true);
+  const [searchOpen, setSearchOpen] = useState(false);
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const dismissed = localStorage.getItem('ehs-banner-dismissed');
     if (dismissed === 'true') setShowBanner(false);
+    // Global Cmd+K search shortcut
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
   }, []);
 
   const handleTabChange = (tab: Tab) => {
@@ -36,7 +49,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
-      <Header activeTab={activeTab} onTabChange={handleTabChange} />
+      <SearchPalette isOpen={searchOpen} onClose={() => setSearchOpen(false)} onNavigate={(tab) => { handleTabChange(tab as Tab); setSearchOpen(false); }} />
+      <Header activeTab={activeTab} onTabChange={handleTabChange} onSearchOpen={() => setSearchOpen(true)} />
 
       {/* Announcement Banner */}
       {showBanner && (
@@ -81,6 +95,8 @@ export default function Home() {
         {activeTab === 'classes' && <ClassDirectory />}
         {activeTab === 'voice' && <SchoolVoice />}
         {activeTab === 'lunch' && <LunchMenu />}
+        {activeTab === 'calendar' && <SchoolCalendar />}
+        {activeTab === 'resources' && <ResourcesHub onNavigate={handleTabChange as (tab: string) => void} />}
       </main>
 
       {/* Footer */}

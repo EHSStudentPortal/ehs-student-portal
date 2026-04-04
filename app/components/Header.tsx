@@ -3,11 +3,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { standardSchedule, minimumDaySchedule, timeToMinutes, formatTime } from '@/data/schedule';
 
-type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch';
+type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch' | 'calendar' | 'resources';
 
 interface HeaderProps {
   activeTab: Tab;
   onTabChange: (tab: Tab) => void;
+  onSearchOpen?: () => void;
 }
 
 function LiveTicker() {
@@ -114,17 +115,19 @@ function LiveTicker() {
   );
 }
 
-const tabs: { id: Tab; label: string; icon: string }[] = [
-  { id: 'home', label: 'Home', icon: '⌂' },
-  { id: 'schedule', label: 'Bell Schedule', icon: '◷' },
-  { id: 'map', label: 'Campus Map', icon: '◈' },
-  { id: 'staff', label: 'Staff', icon: '◉' },
-  { id: 'classes', label: 'Courses', icon: '◫' },
-  { id: 'lunch', label: 'Lunch Menu', icon: '◍' },
-  { id: 'voice', label: 'SchoolVoice', icon: '◌' },
+const tabs: { id: Tab; label: string }[] = [
+  { id: 'home', label: 'Home' },
+  { id: 'schedule', label: 'Bell Schedule' },
+  { id: 'map', label: 'Campus Map' },
+  { id: 'staff', label: 'Staff' },
+  { id: 'classes', label: 'Courses' },
+  { id: 'lunch', label: 'Lunch' },
+  { id: 'calendar', label: 'Calendar' },
+  { id: 'resources', label: 'Resources' },
+  { id: 'voice', label: 'SchoolVoice' },
 ];
 
-export default function Header({ activeTab, onTabChange }: HeaderProps) {
+export default function Header({ activeTab, onTabChange, onSearchOpen }: HeaderProps) {
   const [darkMode, setDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -210,6 +213,17 @@ export default function Header({ activeTab, onTabChange }: HeaderProps) {
 
           {/* Right controls */}
           <div className="flex items-center gap-2">
+            {/* Search button */}
+            <button
+              onClick={onSearchOpen}
+              className="hidden sm:flex items-center gap-2 px-3 h-8 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-all duration-200 font-dm-mono text-xs"
+              aria-label="Search (Cmd+K)"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <span className="text-white/30">⌘K</span>
+            </button>
             {/* Dark mode */}
             <button
               onClick={toggleDark}
@@ -296,7 +310,7 @@ export default function Header({ activeTab, onTabChange }: HeaderProps) {
                       : 'text-white/60 hover:bg-white/10 hover:text-white'
                   }`}
                 >
-                  <span className="text-lg">{tab.icon}</span>
+                  <span className="text-lg">{'⊞'}</span>
                   {tab.label}
                   {activeTab === tab.id && (
                     <svg className="ml-auto w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
