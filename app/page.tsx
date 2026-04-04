@@ -1,100 +1,148 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import Header from './components/Header';
+import BellSchedule from './components/BellSchedule';
+import CampusMap from './components/CampusMap';
+import StaffDirectory from './components/StaffDirectory';
+import ClassDirectory from './components/ClassDirectory';
+import SchoolVoice from './components/SchoolVoice';
+import Hero from './components/Hero';
+
+type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [activeTab, setActiveTab] = useState<Tab>('home');
+  const [showBanner, setShowBanner] = useState(true);
+  const mainRef = useRef<HTMLDivElement>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ehs-banner-dismissed');
+    if (dismissed === 'true') setShowBanner(false);
+  }, []);
+
+  const handleTabChange = (tab: Tab) => {
+    setActiveTab(tab);
+    // Smooth scroll to top of content
+    mainRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const dismissBanner = () => {
+    setShowBanner(false);
+    localStorage.setItem('ehs-banner-dismissed', 'true');
+  };
+
+  return (
+    <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
+      <Header activeTab={activeTab} onTabChange={handleTabChange} />
+
+      {/* Announcement Banner */}
+      {showBanner && (
+        <div
+          className="relative overflow-hidden px-4 py-3 flex items-center justify-between gap-4"
+          style={{
+            background: 'linear-gradient(135deg, #059669 0%, #047857 50%, #1d4ed8 100%)',
+          }}
+        >
+          {/* Shimmer effect */}
+          <div className="absolute inset-0 shimmer opacity-20" />
+
+          <div className="relative flex items-center gap-3 flex-1 min-w-0">
+            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+              <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
+                  d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+              </svg>
+            </div>
+            <p className="font-dm-sans text-sm text-white leading-snug truncate">
+              <span className="font-bold">Spring Update:</span>{' '}
+              AP exam registration closes April 18 — see your counselor to confirm enrollment.
+            </p>
+          </div>
+          <button
+            onClick={dismissBanner}
+            className="relative flex-shrink-0 w-6 h-6 rounded-full bg-white/15 flex items-center justify-center text-white/80 hover:bg-white/25 hover:text-white transition-all"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+      )}
+
+      {/* Main content */}
+      <main ref={mainRef}>
+        {activeTab === 'home' && <Hero onNavigate={handleTabChange} />}
+        {activeTab === 'schedule' && <BellSchedule />}
+        {activeTab === 'map' && <CampusMap />}
+        {activeTab === 'staff' && <StaffDirectory />}
+        {activeTab === 'classes' && <ClassDirectory />}
+        {activeTab === 'voice' && <SchoolVoice />}
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="border-t mt-20 py-10 px-6" style={{ borderColor: 'var(--border-light)' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+            {/* Logo */}
+            <div className="flex items-center gap-3">
+              <div
+                className="w-9 h-9 rounded-xl flex items-center justify-center shadow-lg"
+                style={{ background: 'linear-gradient(135deg, #10b981, #3b82f6)' }}
+              >
+                <span className="font-syne font-black text-white text-xs">EHS</span>
+              </div>
+              <div>
+                <div className="font-syne font-bold text-sm" style={{ color: 'var(--text-primary)' }}>
+                  Emerald High School
+                </div>
+                <div className="font-dm-mono text-[10px] tracking-widest" style={{ color: 'var(--text-muted)' }}>
+                  STUDENT PORTAL
+                </div>
+              </div>
+            </div>
+
+            {/* Links */}
+            <div className="flex items-center gap-6">
+              {[
+                { label: 'Bell Schedule', tab: 'schedule' as Tab },
+                { label: 'Campus Map', tab: 'map' as Tab },
+                { label: 'Staff Directory', tab: 'staff' as Tab },
+                { label: 'Courses', tab: 'classes' as Tab },
+              ].map(({ label, tab }) => (
+                <button
+                  key={tab}
+                  onClick={() => handleTabChange(tab)}
+                  className="font-dm-sans text-xs transition-colors hover:text-emerald-500"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            {/* Info */}
+            <div className="flex items-center gap-3">
+              <span className="font-dm-mono text-xs" style={{ color: 'var(--text-muted)' }}>
+                Dublin, CA 94568
+              </span>
+              <span className="w-px h-3 bg-emerald-200 dark:bg-emerald-900" />
+              <a
+                href="/admin"
+                className="font-dm-mono text-xs text-emerald-500 hover:text-emerald-600 transition-colors"
+              >
+                Admin ↗
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t text-center" style={{ borderColor: 'var(--border-light)' }}>
+            <p className="font-dm-mono text-[10px] tracking-wider" style={{ color: 'var(--text-subtle)' }}>
+              EMERALD HIGH SCHOOL STUDENT PORTAL • DUBLIN UNIFIED SCHOOL DISTRICT • 2024–2025
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
