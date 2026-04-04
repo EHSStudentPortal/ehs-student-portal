@@ -46,6 +46,7 @@ export const staff: StaffMember[] = [
     phone: '(925) 828-2551',
     bio: 'Principal Velez leads Emerald High School with a commitment to academic excellence, equity, and community. She brings years of experience in Dublin USD to her role as principal.',
     availability: 'By appointment — contact Main Office',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1537293/images/DUBLIN-EMHS1671651297834_thumb.jpg',
   },
   {
     id: 'admin-002',
@@ -57,6 +58,7 @@ export const staff: StaffMember[] = [
     email: 'c.kitchens@dublinusd.org',
     bio: 'Assistant Principal Kitchens oversees curriculum and instruction, supporting teachers and students in achieving their academic goals.',
     availability: 'Mon–Fri, 7:30 AM–4:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1738660/images/DUBLIN-EMHS1736353165634_thumb.jpg',
   },
   {
     id: 'admin-003',
@@ -68,6 +70,7 @@ export const staff: StaffMember[] = [
     email: 'g.peppler@dublinusd.org',
     bio: 'Assistant Principal Peppler manages student affairs, attendance, and school culture. He is a strong advocate for positive school community.',
     availability: 'Mon–Fri, 7:30 AM–4:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1772703/images/DUBLIN-EMHS1753935303472_thumb.jpg',
   },
 
   // ── Athletics ────────────────────────────────────────────────────────
@@ -81,6 +84,7 @@ export const staff: StaffMember[] = [
     email: 'c.johansen@dublinusd.org',
     bio: 'Athletic Director Johansen oversees all EHS sports programs and athletics operations, supporting student-athletes across all sports.',
     availability: 'Mon–Fri, Before & After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1772701/images/DUBLIN-EMHS1753935236832_thumb.jpg',
   },
   {
     id: 'ath-002',
@@ -92,6 +96,7 @@ export const staff: StaffMember[] = [
     email: 'a.rueda@dublinusd.org',
     bio: 'Athletic Trainer Rueda provides medical support and injury prevention care for EHS student-athletes across all sports programs.',
     availability: 'Daily during athletics periods and after school',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1790282/images/DUBLIN-EMHS1754416304789_thumb.jpg',
   },
 
   // ── Counselors ────────────────────────────────────────────────────────
@@ -106,6 +111,7 @@ export const staff: StaffMember[] = [
     phone: '(925) 828-2551',
     bio: 'Head Counselor Heise leads the EHS counseling department, supporting students with academic planning, social-emotional wellness, and college readiness.',
     availability: 'Mon–Fri, drop-in 8:00–8:55 AM & by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559038/images/DUBLIN-EMHS1692244655810_thumb.jpg',
   },
   {
     id: 'counselor-002',
@@ -117,6 +123,7 @@ export const staff: StaffMember[] = [
     email: 'c.henning@dublinusd.org',
     bio: 'Counselor Henning supports EHS students with course planning, college applications, and social-emotional guidance.',
     availability: 'Mon–Fri, drop-in & by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785620/images/DUBLIN-EMHS1753932227876_thumb.jpg',
   },
   {
     id: 'counselor-003',
@@ -128,6 +135,7 @@ export const staff: StaffMember[] = [
     email: 'p.nandakishore@dublinusd.org',
     bio: 'Counselor Nandakishore provides academic counseling and college preparation support for EHS students.',
     availability: 'Mon–Fri, Lunch & by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670493/images/DUBLIN-EMHS1719018134442_thumb.jpg',
   },
   {
     id: 'counselor-004',
@@ -139,6 +147,7 @@ export const staff: StaffMember[] = [
     email: 'n.ordonez@dublinusd.org',
     bio: 'Counselor Ordonez supports students through course selection, academic challenges, and college and career planning.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785619/images/DUBLIN-EMHS1753932061832_thumb.jpg',
   },
 
   // ── Office Staff ──────────────────────────────────────────────────────
@@ -152,6 +161,7 @@ export const staff: StaffMember[] = [
     email: 's.bacher@dublinusd.org',
     bio: 'Ms. Bacher helps EHS students navigate college applications, career exploration, and scholarship opportunities.',
     availability: 'Mon–Fri, drop-in during lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1715880/images/DUBLIN-EMHS1725649221558_thumb.jpg',
   },
   {
     id: 'office-002',
@@ -164,6 +174,7 @@ export const staff: StaffMember[] = [
     phone: '(925) 828-2551',
     bio: 'Ms. Cunniffe manages student records, registration, and attendance. She handles transcript requests and enrollment.',
     availability: 'Mon–Fri, 7:00 AM–3:30 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1584587/images/DUBLIN-EMHS1693948817760_thumb.jpg',
   },
   {
     id: 'office-003',
@@ -176,6 +187,7 @@ export const staff: StaffMember[] = [
     phone: '(925) 828-2551',
     bio: "Ms. Moore is the Principal's secretary and one of the first points of contact in the EHS main office.",
     availability: 'Mon–Fri, 7:00 AM–4:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1552535/images/DUBLIN-EMHS1758229666145_thumb.jpg',
   },
   {
     id: 'office-004',
@@ -187,6 +199,7 @@ export const staff: StaffMember[] = [
     email: 'n.tariq@dublinusd.org',
     bio: 'Ms. Tariq coordinates appointments and administrative support for the counseling and wellness center.',
     availability: 'Mon–Fri, 7:30 AM–3:30 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559754/images/DUBLIN-EMHS1690406498101_thumb.jpg',
   },
 
   // ── Teachers: Computer Science ─────────────────────────────────────
@@ -200,6 +213,7 @@ export const staff: StaffMember[] = [
     email: 'm.baez@dublinusd.org',
     bio: 'Mr. Baez teaches computer science, helping students develop computational thinking, programming skills, and prepare for AP Computer Science exams.',
     availability: 'Tue & Thu, Lunch & After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1585443/images/DUBLIN-EMHS1692031504975_thumb.jpg',
   },
   {
     id: 'cs-002',
@@ -211,6 +225,7 @@ export const staff: StaffMember[] = [
     email: 't.lee@dublinusd.org',
     bio: 'Mr. Lee bridges computer science and mathematics, teaching both AP CS and advanced math courses with an emphasis on real-world applications.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785638/images/DUBLIN-EMHS1753935549146_thumb.jpg',
   },
 
   // ── Teachers: Engineering ──────────────────────────────────────────
@@ -224,6 +239,7 @@ export const staff: StaffMember[] = [
     email: 'p.barton@dublinusd.org',
     bio: 'Ms. Barton leads the EHS Engineering program and Yearbook class, inspiring students in design thinking and creative production.',
     availability: 'Mon & Wed, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1586716/images/DUBLIN-EMHS1711570237794_thumb.jpg',
   },
 
   // ── Teachers: Math ─────────────────────────────────────────────────
@@ -237,6 +253,7 @@ export const staff: StaffMember[] = [
     email: 'b.bohannon@dublinusd.org',
     bio: 'Mr. Bohannon teaches foundational mathematics courses with an emphasis on problem-solving and real-world applications.',
     availability: 'Mon–Thu, After School 3:20–4:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786490/images/DUBLIN-EMHS1754096630499_thumb.jpg',
   },
   {
     id: 'math-002',
@@ -248,6 +265,7 @@ export const staff: StaffMember[] = [
     email: 'a.kim@dublinusd.org',
     bio: 'Ms. Kim brings a collaborative, student-centered approach to Algebra II and Pre-Calculus, helping students build confidence in higher-level math.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785622/images/DUBLIN-EMHS1753932557546_thumb.jpg',
   },
   {
     id: 'math-003',
@@ -259,6 +277,7 @@ export const staff: StaffMember[] = [
     email: 'r.lee@dublinusd.org',
     bio: 'Ms. Lee emphasizes visual and conceptual learning in her Geometry and Advanced Algebra courses.',
     availability: 'Mon, Wed, Fri — Period 5',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1677380/images/DUBLIN-EMHS1721863636635_thumb.jpg',
   },
   {
     id: 'math-004',
@@ -270,6 +289,7 @@ export const staff: StaffMember[] = [
     email: 'l.pappalardo@dublinusd.org',
     bio: 'Ms. Pappalardo is known for making calculus approachable and engaging. Her AP Calculus AB students consistently score well on the AP exam.',
     availability: 'Daily during lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1585445/images/DUBLIN-EMHS1691078587853_thumb.jpg',
   },
   {
     id: 'math-005',
@@ -281,6 +301,7 @@ export const staff: StaffMember[] = [
     email: 'j.roberts@dublinusd.org',
     bio: 'Ms. Roberts leads the EHS Math department and teaches the most advanced calculus and statistics courses.',
     availability: 'Mon–Fri, 7:30–8:00 AM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559053/images/DUBLIN-EMHS1691545621559_thumb.jpg',
   },
   {
     id: 'math-006',
@@ -292,6 +313,7 @@ export const staff: StaffMember[] = [
     email: 'd.snedden@dublinusd.org',
     bio: 'Mr. Snedden teaches foundational algebra and financial math, helping students connect mathematics to practical life skills.',
     availability: 'Tue & Thu, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785625/images/DUBLIN-EMHS1753933029575_thumb.jpg',
   },
   {
     id: 'math-007',
@@ -303,6 +325,7 @@ export const staff: StaffMember[] = [
     email: 'j.stevens@dublinusd.org',
     bio: 'Mr. Stevens teaches Trigonometry and Algebra II, emphasizing graphing and real-world applications of mathematical functions.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1683929/images/DUBLIN-EMHS1722994018609_thumb.jpg',
   },
   {
     id: 'math-008',
@@ -314,6 +337,7 @@ export const staff: StaffMember[] = [
     email: 'm.uthayasegar@dublinusd.org',
     bio: 'Ms. Uthayasegar brings a rigorous and supportive approach to Geometry and AP Statistics courses.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785624/images/DUBLIN-EMHS1754613209567_thumb.jpg',
   },
   {
     id: 'math-009',
@@ -325,6 +349,7 @@ export const staff: StaffMember[] = [
     email: 'm.wang@dublinusd.org',
     bio: 'Ms. Wang uses collaborative and inquiry-based learning to help students master core algebra skills.',
     availability: 'Tue & Thu, 7:30 AM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670499/images/DUBLIN-EMHS1719020200790_thumb.jpg',
   },
 
   // ── Teachers: English ─────────────────────────────────────────────
@@ -338,6 +363,7 @@ export const staff: StaffMember[] = [
     email: 'k.deakin@dublinusd.org',
     bio: 'Ms. Deakin is known for her dynamic discussions and writing workshops. She teaches both freshman English and AP Language & Composition.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786494/images/DUBLIN-EMHS1754096951475_thumb.jpg',
   },
   {
     id: 'eng-lit-002',
@@ -349,6 +375,7 @@ export const staff: StaffMember[] = [
     email: 'k.fauria@dublinusd.org',
     bio: 'Ms. Fauria has a passion for contemporary literature and creative expression. Her Creative Writing course is one of the most popular at EHS.',
     availability: 'Tue & Thu, 7:45 AM & Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786496/images/DUBLIN-EMHS1754097244567_thumb.jpg',
   },
   {
     id: 'eng-lit-003',
@@ -360,6 +387,7 @@ export const staff: StaffMember[] = [
     email: 'g.fogel@dublinusd.org',
     bio: 'Mr. Fogel has taught AP Literature for many years, specializing in 20th-century British and American literature.',
     availability: 'Tue & Thu, After School 3:20–4:15 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785628/images/DUBLIN-EMHS1754704085659_thumb.jpg',
   },
   {
     id: 'eng-lit-004',
@@ -371,6 +399,7 @@ export const staff: StaffMember[] = [
     email: 'e.hernandez@dublinusd.org',
     bio: 'Ms. Hernandez creates an inclusive classroom environment where all students develop strong literacy and critical thinking skills.',
     availability: 'Mon–Fri, Period 5',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1831792/images/DUBLIN-EMHS1771455175773_thumb.jpg',
   },
   {
     id: 'eng-lit-005',
@@ -382,6 +411,7 @@ export const staff: StaffMember[] = [
     email: 'c.johnston@dublinusd.org',
     bio: 'Ms. Johnston teaches junior English and is the advisor for the EHS Yearbook. Her courses emphasize multimedia literacy and storytelling.',
     availability: 'Mon, Wed, Fri — 7:30 AM & Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785627/images/DUBLIN-EMHS1753933189473_thumb.jpg',
   },
   {
     id: 'eng-lit-006',
@@ -393,6 +423,7 @@ export const staff: StaffMember[] = [
     email: 'a.karantzalis@dublinusd.org',
     bio: 'Ms. Karantzalis teaches film and media literacy alongside English, helping students analyze storytelling across written and visual mediums.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559082/images/DUBLIN-EMHS1688598342592_thumb.jpg',
   },
   {
     id: 'eng-lit-007',
@@ -404,6 +435,7 @@ export const staff: StaffMember[] = [
     email: 'm.santoyo@dublinusd.org',
     bio: 'Ms. Santoyo is known for her Socratic seminars and immersive novel studies that challenge and engage all learners.',
     availability: 'Mon, Wed, Fri — Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670491/images/DUBLIN-EMHS1719017811795_thumb.jpg',
   },
   {
     id: 'eng-lit-008',
@@ -415,6 +447,7 @@ export const staff: StaffMember[] = [
     email: 'g.subramonian@dublinusd.org',
     bio: 'Ms. Subramonian specializes in literacy-focused instruction with an emphasis on annotation, inference, and academic writing.',
     availability: 'Mon–Fri, 7:30 AM & Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559074/images/DUBLIN-EMHS1684981702141_thumb.jpg',
   },
   {
     id: 'eng-lit-009',
@@ -426,6 +459,7 @@ export const staff: StaffMember[] = [
     email: 'c.turpel@dublinusd.org',
     bio: 'Lead English Teacher Turpel has mentored numerous students to success in AP Literature and advanced writing courses.',
     availability: 'Tue & Thu, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559051/images/DUBLIN-EMHS1771544164199_thumb.jpg',
   },
   {
     id: 'eng-lit-010',
@@ -437,6 +471,7 @@ export const staff: StaffMember[] = [
     email: 'k.voeller@dublinusd.org',
     bio: 'Mr. Voeller prepares seniors for college-level writing through his rigorous Expository Reading and Writing course.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670498/images/DUBLIN-EMHS1719020070265_thumb.jpg',
   },
   {
     id: 'eng-lit-011',
@@ -448,6 +483,7 @@ export const staff: StaffMember[] = [
     email: 'l.gordon@dublinusd.org',
     bio: 'Ms. Gordon Reska serves as both Activities Director and English teacher, leading student government and building school spirit at EHS.',
     availability: 'Mon–Fri, Lunch & After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670489/images/DUBLIN-EMHS1723425476684_thumb.jpg',
   },
 
   // ── Teachers: Science ─────────────────────────────────────────────
@@ -461,6 +497,7 @@ export const staff: StaffMember[] = [
     email: 'e.brumage@dublinusd.org',
     bio: 'Ms. Brumage brings research-based approaches to her biology courses, incorporating field work and lab investigations into every unit.',
     availability: 'Daily, 7:30–8:00 AM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670485/images/DUBLIN-EMHS1719016694709_thumb.jpg',
   },
   {
     id: 'sci-002',
@@ -472,6 +509,7 @@ export const staff: StaffMember[] = [
     email: 't.casavant@dublinusd.org',
     bio: 'Mr. Casavant makes complex chemistry concepts accessible through hands-on lab work and real-world applications.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786493/images/DUBLIN-EMHS1754096787162_thumb.jpg',
   },
   {
     id: 'sci-003',
@@ -483,6 +521,7 @@ export const staff: StaffMember[] = [
     email: 'n.faggiano@dublinusd.org',
     bio: 'Ms. Faggiano is passionate about environmental science, integrating field work and community science projects into her curriculum.',
     availability: 'Mon & Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1677379/images/DUBLIN-EMHS1721863536747_thumb.jpg',
   },
   {
     id: 'sci-004',
@@ -494,6 +533,7 @@ export const staff: StaffMember[] = [
     email: 'k.hermens@dublinusd.org',
     bio: 'Lead Science Teacher Hermens uses engineering design challenges and real-world problems to teach physics principles.',
     availability: 'Tue & Thu, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785631/images/DUBLIN-EMHS1754950938868_thumb.jpg',
   },
   {
     id: 'sci-005',
@@ -505,6 +545,7 @@ export const staff: StaffMember[] = [
     email: 'e.kang@dublinusd.org',
     bio: 'Ms. Kang teaches biology and anatomy, helping students connect cellular concepts to human body systems.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670490/images/DUBLIN-EMHS1719017612178_thumb.jpg',
   },
   {
     id: 'sci-006',
@@ -516,6 +557,7 @@ export const staff: StaffMember[] = [
     email: 's.louris@dublinusd.org',
     bio: 'Ms. Louris approaches science instruction with inquiry-based learning and collaborative lab investigations.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785639/images/DUBLIN-EMHS1753935731272_thumb.jpg',
   },
   {
     id: 'sci-007',
@@ -527,6 +569,7 @@ export const staff: StaffMember[] = [
     email: 'p.mehta@dublinusd.org',
     bio: 'Ms. Mehta brings a research-focused perspective to AP Biology and foundational biology, with a focus on experimental design.',
     availability: 'Mon–Fri, Period 2',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1683927/images/DUBLIN-EMHS1722993857674_thumb.jpg',
   },
   {
     id: 'sci-008',
@@ -538,6 +581,7 @@ export const staff: StaffMember[] = [
     email: 's.palanichamy@dublinusd.org',
     bio: 'Ms. Palanichamy teaches chemistry and physics with an emphasis on mathematical modeling and problem-solving.',
     availability: 'Mon & Thu, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1683925/images/DUBLIN-EMHS1722993685023_thumb.jpg',
   },
   {
     id: 'sci-009',
@@ -549,6 +593,7 @@ export const staff: StaffMember[] = [
     email: 'p.ramsay@dublinusd.org',
     bio: 'Ms. Ramsay leads environmental science investigations, connecting classroom learning to real-world ecological issues.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559040/images/DUBLIN-EMHS1685895405303_thumb.jpg',
   },
   {
     id: 'sci-010',
@@ -560,6 +605,7 @@ export const staff: StaffMember[] = [
     email: 'e.subramanian@dublinusd.org',
     bio: 'Ms. Subramanian teaches AP Chemistry with a strong focus on understanding chemical principles through guided inquiry.',
     availability: 'Mon & Wed, 7:30–8:00 AM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793315/images/DUBLIN-EMHS1754856545302_thumb.jpg',
   },
   {
     id: 'sci-011',
@@ -571,6 +617,7 @@ export const staff: StaffMember[] = [
     email: 'j.willis@dublinusd.org',
     bio: 'Mr. Willis incorporates hands-on engineering projects into his physics curriculum, making abstract concepts tangible.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785629/images/DUBLIN-EMHS1753933477155_thumb.jpg',
   },
 
   // ── Teachers: Social Science ──────────────────────────────────────
@@ -584,6 +631,7 @@ export const staff: StaffMember[] = [
     email: 'd.bogue@dublinusd.org',
     bio: 'Ms. Bogue has traveled extensively and brings a global perspective to history education, emphasizing cross-cultural understanding.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785621/images/DUBLIN-EMHS1753932411440_thumb.jpg',
   },
   {
     id: 'ss-002',
@@ -595,6 +643,7 @@ export const staff: StaffMember[] = [
     email: 'c.imai@dublinusd.org',
     bio: 'Lead Social Science Teacher Imai is a National History Day coach. He uses primary sources and debates to teach American history.',
     availability: 'Mon–Wed, 7:45 AM & After School Mon',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559050/images/DUBLIN-EMHS1691596312430_thumb.jpg',
   },
   {
     id: 'ss-003',
@@ -606,6 +655,7 @@ export const staff: StaffMember[] = [
     email: 't.maxson@dublinusd.org',
     bio: 'Ms. Maxson makes government and civics relevant through simulations, mock trials, and current events analysis.',
     availability: 'Wed & Fri, 3:20–4:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786500/images/DUBLIN-EMHS1754097565200_thumb.jpg',
   },
   {
     id: 'ss-004',
@@ -617,6 +667,7 @@ export const staff: StaffMember[] = [
     email: 'n.meehan@dublinusd.org',
     bio: 'Ms. Meehan holds a Masters in Psychology and teaches both AP and introductory psychology courses with real-world applications.',
     availability: 'Mon–Fri, Period 2',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785623/images/DUBLIN-EMHS1761063790210_thumb.jpg',
   },
   {
     id: 'ss-005',
@@ -628,6 +679,7 @@ export const staff: StaffMember[] = [
     email: 'g.rodriguez@dublinusd.org',
     bio: 'Mr. Rodriguez has a background in public policy and brings economic theory to life through case studies and current events.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670496/images/DUBLIN-EMHS1719018612037_thumb.jpg',
   },
   {
     id: 'ss-006',
@@ -639,6 +691,7 @@ export const staff: StaffMember[] = [
     email: 'v.wienholz@dublinusd.org',
     bio: 'Ms. Wienholz teaches AP Human Geography and World History, emphasizing geographic and cultural perspectives.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670501/images/DUBLIN-EMHS1719020375818_thumb.jpg',
   },
   {
     id: 'ss-007',
@@ -650,6 +703,7 @@ export const staff: StaffMember[] = [
     email: 'a.zlatkovic@dublinusd.org',
     bio: 'Mr. Zlatkovic is known for bringing history to life through narrative storytelling, primary sources, and student-led debate.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1758685/images/DUBLIN-EMHS1743459872317_thumb.jpg',
   },
 
   // ── Teachers: PE ─────────────────────────────────────────────────
@@ -663,6 +717,7 @@ export const staff: StaffMember[] = [
     email: 'c.branson@dublinusd.org',
     bio: 'Coach Branson emphasizes fitness, teamwork, and personal responsibility in all PE classes.',
     availability: 'Mon–Fri, After School (practice)',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559081/images/DUBLIN-EMHS1684532207373_thumb.jpg',
   },
   {
     id: 'pe-002',
@@ -674,6 +729,7 @@ export const staff: StaffMember[] = [
     email: 'm.kirby@dublinusd.org',
     bio: 'Mr. Kirby is a certified personal trainer who teaches PE and dance, promoting lifelong fitness habits.',
     availability: 'Mon–Fri, Before School 7:30 AM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1706582/images/DUBLIN-EMHS1724082722717_thumb.jpg',
   },
   {
     id: 'pe-003',
@@ -685,6 +741,7 @@ export const staff: StaffMember[] = [
     email: 'm.tomilloso@dublinusd.org',
     bio: 'Ms. Tomilloso coaches and teaches PE, integrating sports science and wellness concepts into her curriculum.',
     availability: 'Tue & Thu, Lunch & After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1568188/images/DUBLIN-EMHS1691528627183_thumb.jpg',
   },
   {
     id: 'pe-004',
@@ -696,6 +753,7 @@ export const staff: StaffMember[] = [
     email: 'j.heath@dublinusd.org',
     bio: 'Ms. Heath teaches Contemporary Health with a focus on the five components of health and real-world decision making.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1677378/images/DUBLIN-EMHS1721863420053_thumb.jpg',
   },
   {
     id: 'pe-005',
@@ -707,6 +765,7 @@ export const staff: StaffMember[] = [
     email: 'j.lemmer@dublinusd.org',
     bio: 'Ms. Lemmer creates a student-centered health classroom focused on building lifelong wellness habits and informed decision-making.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559753/images/DUBLIN-EMHS1684970443853_thumb.jpg',
   },
   {
     id: 'pe-006',
@@ -718,6 +777,7 @@ export const staff: StaffMember[] = [
     email: 'c.macdougall@dublinusd.org',
     bio: 'Lead Health Teacher MacDougall oversees the Contemporary Health curriculum, incorporating the EHS Freshman Mentor Program.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559039/images/DUBLIN-EMHS1691530999439_thumb.jpg',
   },
   {
     id: 'pe-007',
@@ -729,6 +789,7 @@ export const staff: StaffMember[] = [
     email: 'j.sherratt@dublinusd.org',
     bio: 'Ms. Sherratt teaches Health with a focus on social-emotional learning, identity, and building positive health behaviors.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670510/images/DUBLIN-EMHS1719023953551_thumb.jpg',
   },
 
   // ── Teachers: Arts / Visual Arts ──────────────────────────────────
@@ -742,6 +803,7 @@ export const staff: StaffMember[] = [
     email: 'a.douglass@dublinusd.org',
     bio: 'Ms. Douglass is a practicing visual artist whose work has been exhibited in Bay Area galleries. She mentors students to develop their artistic voice.',
     availability: 'Mon–Thu, After School 3:20–4:30 PM (studio open)',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1585449/images/DUBLIN-EMHS1691078626488_thumb.jpg',
   },
 
   // ── Teachers: Performing Arts ─────────────────────────────────────
@@ -755,6 +817,7 @@ export const staff: StaffMember[] = [
     email: 'j.tran@dublinusd.org',
     bio: 'Director Tran leads the EHS Band and Orchestra programs. Under his direction, EHS ensembles have earned top ratings at regional competitions.',
     availability: 'Daily, Before School 7:15–8:00 AM (rehearsal)',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559055/images/DUBLIN-EMHS1732756149190_thumb.jpg',
   },
 
   // ── Teachers: World Language ──────────────────────────────────────
@@ -768,6 +831,7 @@ export const staff: StaffMember[] = [
     email: 's.chen@dublinusd.org',
     bio: 'Ms. Chen teaches Mandarin Chinese at all levels, creating an immersive language learning environment at EHS.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559680/images/DUBLIN-EMHS1688598249373_thumb.jpg',
   },
   {
     id: 'wl-002',
@@ -779,6 +843,7 @@ export const staff: StaffMember[] = [
     email: 'v.jacob@dublinusd.org',
     bio: 'Lead World Language Teacher Jacob oversees the department and teaches Spanish at multiple levels, emphasizing oral proficiency.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785634/images/DUBLIN-EMHS1753934584314_thumb.jpg',
   },
   {
     id: 'wl-003',
@@ -790,6 +855,7 @@ export const staff: StaffMember[] = [
     email: 'j.moon@dublinusd.org',
     bio: 'Ms. Moon teaches advanced Spanish courses with an emphasis on cultural literacy and linguistic analysis.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1683931/images/DUBLIN-EMHS1722994237728_thumb.jpg',
   },
   {
     id: 'wl-004',
@@ -801,6 +867,7 @@ export const staff: StaffMember[] = [
     email: 'v.palma@dublinusd.org',
     bio: 'Ms. Palma creates an engaging and communicative Spanish classroom using authentic materials and cultural exploration.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670494/images/DUBLIN-EMHS1719018312136_thumb.jpg',
   },
   {
     id: 'wl-005',
@@ -812,6 +879,7 @@ export const staff: StaffMember[] = [
     email: 'r.rodriguez@dublinusd.org',
     bio: 'Ms. Rodriguez teaches intermediate Spanish with a focus on authentic communication and cultural connection.',
     availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785641/images/DUBLIN-EMHS1753936205182_thumb.jpg',
   },
   {
     id: 'wl-006',
@@ -823,6 +891,7 @@ export const staff: StaffMember[] = [
     email: 'r.serrano@dublinusd.org',
     bio: 'Ms. Serrano uses communicative language teaching methods to help students build confidence in Spanish.',
     availability: 'Tue & Thu, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559077/images/DUBLIN-EMHS1691529765731_thumb.jpg',
   },
   {
     id: 'wl-007',
@@ -834,6 +903,7 @@ export const staff: StaffMember[] = [
     email: 'k.soule@dublinusd.org',
     bio: 'Ms. Soule teaches French at all levels and has led immersive cultural programs for EHS French students.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559078/images/DUBLIN-EMHS1691530705065_thumb.jpg',
   },
 
   // ── Teachers: Culinary ────────────────────────────────────────────
@@ -847,6 +917,7 @@ export const staff: StaffMember[] = [
     email: 'r.srour@dublinusd.org',
     bio: 'Chef Srour brings culinary expertise and professional kitchen standards to EHS Culinary Arts classes, preparing students for the food industry.',
     availability: 'Mon & Wed, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785632/images/DUBLIN-EMHS1753933813729_thumb.jpg',
   },
 
   // ── Special Education ─────────────────────────────────────────────
@@ -860,6 +931,7 @@ export const staff: StaffMember[] = [
     email: 'b.blackmon@dublinusd.org',
     bio: 'Mr. Blackmon provides specialized instruction and support to students with diverse learning needs at EHS.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786489/images/DUBLIN-EMHS1754096466416_thumb.jpg',
   },
   {
     id: 'sped-002',
@@ -871,6 +943,7 @@ export const staff: StaffMember[] = [
     email: 'r.dunbar@dublinusd.org',
     bio: 'Mr. Dunbar specializes in designing individualized learning programs that help students with diverse needs succeed academically.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670486/images/DUBLIN-EMHS1719017091703_thumb.jpg',
   },
   {
     id: 'sped-003',
@@ -882,6 +955,7 @@ export const staff: StaffMember[] = [
     email: 'v.khanna@dublinusd.org',
     bio: 'Ms. Khanna provides targeted instruction and support for students with individualized education programs.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786499/images/DUBLIN-EMHS1754097411002_thumb.jpg',
   },
   {
     id: 'sped-004',
@@ -893,6 +967,7 @@ export const staff: StaffMember[] = [
     email: 'k.walker@dublinusd.org',
     bio: 'Ms. Walker is dedicated to creating accessible learning experiences and supporting all EHS students in reaching their potential.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786501/images/DUBLIN-EMHS1754097748084_thumb.jpg',
   },
 
   // ── Wellness / Specialists ─────────────────────────────────────────
@@ -906,6 +981,7 @@ export const staff: StaffMember[] = [
     email: 'l.levin@dublinusd.org',
     bio: 'Mr. Levin runs the EHS Wellness Center, providing drop-in support and mental health resources for all students.',
     availability: 'Mon–Fri, 8:00 AM–3:30 PM (drop-in welcome)',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670509/images/DUBLIN-EMHS1719023517951_thumb.jpg',
   },
   {
     id: 'wellness-002',
@@ -917,6 +993,7 @@ export const staff: StaffMember[] = [
     email: 'l.ureno@dublinusd.org',
     bio: 'Ms. Ureno is a licensed counselor supporting students with social-emotional challenges and connecting them to community resources.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1786502/images/DUBLIN-EMHS1754097929521_thumb.jpg',
   },
   {
     id: 'wellness-003',
@@ -928,6 +1005,7 @@ export const staff: StaffMember[] = [
     email: 's.carroll@dublinusd.org',
     bio: 'Ms. Carroll provides speech and language support for students with communication needs, working alongside teachers and families.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1592922/images/DUBLIN-EMHS1723575307655_thumb.jpg',
   },
   {
     id: 'wellness-004',
@@ -939,6 +1017,7 @@ export const staff: StaffMember[] = [
     email: 's.ling@dublinusd.org',
     bio: 'Dr. Ling provides psychological assessments and counseling support, helping students navigate academic and social-emotional challenges.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1591685/images/DUBLIN-EMHS1691259739480_thumb.jpg',
   },
   {
     id: 'wellness-005',
@@ -950,6 +1029,7 @@ export const staff: StaffMember[] = [
     email: 'q.wu@dublinusd.org',
     bio: 'Ms. Wu supports student mental health and learning, providing assessments and working with families and educators.',
     availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1785640/images/DUBLIN-EMHS1753936065412_thumb.jpg',
   },
 
   // ── ROP Teachers ────────────────────────────────────────────────
@@ -963,6 +1043,7 @@ export const staff: StaffMember[] = [
     email: 'm.baker@dublinusd.org',
     bio: 'Ms. Baker teaches ROP digital arts and design courses, helping students build professional portfolios in animation and game design.',
     availability: 'Mon & Wed, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793316/images/DUBLIN-EMHS1754856663441_thumb.jpg',
   },
   {
     id: 'rop-002',
@@ -974,6 +1055,7 @@ export const staff: StaffMember[] = [
     email: 'c.gnagy@dublinusd.org',
     bio: 'Mr. Gnagy brings hands-on industry experience to his automotive technology ROP courses.',
     availability: 'Mon–Fri, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793319/images/DUBLIN-EMHS1754856893547_thumb.jpg',
   },
   {
     id: 'rop-003',
@@ -985,6 +1067,7 @@ export const staff: StaffMember[] = [
     email: 'l.low@dublinusd.org',
     bio: 'Mr. Low teaches advanced engineering ROP courses, connecting students with industry professionals and real-world manufacturing.',
     availability: 'Tue & Thu, After School',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793317/images/DUBLIN-EMHS1754856767683_thumb.jpg',
   },
   {
     id: 'rop-004',
@@ -996,7 +1079,456 @@ export const staff: StaffMember[] = [
     email: 'b.udoutch@dublinusd.org',
     bio: 'Ms. Udoutch teaches business and marketing ROP courses, preparing students for entrepreneurship and the business world.',
     availability: 'Mon & Wed, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793320/images/DUBLIN-EMHS1759505646505_thumb.jpg',
   },
+  // ── Office Staff (additional) ─────────────────────────────────────
+  {
+    id: 'office-005',
+    name: 'Linda Bergamo Guido',
+    title: 'ASB Secretary',
+    department: 'Office',
+    room: 'Main Office',
+    subjects: [],
+    email: 'l.bergamo@dublinusd.org',
+    bio: 'Ms. Bergamo Guido handles ASB administrative support, coordinating activities and student government logistics.',
+    availability: 'Mon–Fri, 7:30 AM–3:30 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1584586/images/DUBLIN-EMHS1691782671526_thumb.jpg',
+  },
+  {
+    id: 'office-006',
+    name: 'Dominique De Vera',
+    title: 'Media Technician',
+    department: 'Office',
+    room: 'Library / Media Center',
+    subjects: [],
+    email: 'd.devera@dublinusd.org',
+    bio: 'Mr. De Vera manages EHS media and technology resources, supporting classroom technology and the library media center.',
+    availability: 'Mon–Fri, 7:30 AM–3:30 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1676660/images/DUBLIN-EMHS1721697058940_thumb.jpg',
+  },
+  {
+    id: 'office-007',
+    name: 'Shilpa Koppar',
+    title: 'Health Services Assistant',
+    department: 'Office',
+    room: 'Health Office',
+    subjects: [],
+    email: 's.koppar@dublinusd.org',
+    bio: 'Ms. Koppar provides first aid and health support to students in the EHS health office.',
+    availability: 'Mon–Fri, 7:30 AM–3:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1822838/images/DUBLIN-EMHS1763403069330_thumb.jpg',
+  },
+  {
+    id: 'office-008',
+    name: 'Felicia Leopold',
+    title: 'Data Processor',
+    department: 'Office',
+    room: 'Main Office',
+    subjects: [],
+    email: 'f.leopold@dublinusd.org',
+    bio: 'Ms. Leopold manages student data and records, ensuring accurate and up-to-date information in school systems.',
+    availability: 'Mon–Fri, 7:30 AM–3:30 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1614558/images/DUBLIN-EMHS1718140847027_thumb.jpg',
+  },
+  {
+    id: 'office-009',
+    name: "Savannah O'Callaghan Jones",
+    title: 'Account Technician',
+    department: 'Office',
+    room: 'Main Office',
+    subjects: [],
+    email: 's.ocallaghan@dublinusd.org',
+    bio: "Ms. O'Callaghan Jones handles school financial accounts and purchasing.",
+    availability: 'Mon–Fri, 8:00 AM–3:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1657084/images/DUBLIN-EMHS1709143747504_thumb.jpg',
+  },
+  {
+    id: 'office-010',
+    name: 'Jennifer True',
+    title: 'Attendance Secretary III',
+    department: 'Office',
+    room: 'Main Office',
+    subjects: [],
+    email: 'j.true@dublinusd.org',
+    bio: 'Ms. True manages student attendance records and serves as an important point of contact for families.',
+    availability: 'Mon–Fri, 7:00 AM–3:30 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1772705/images/DUBLIN-EMHS1753822320558_thumb.jpg',
+  },
+
+  // ── Additional Special Education ───────────────────────────────────
+  {
+    id: 'sped-005',
+    name: 'Monique Paris',
+    title: 'Education Specialist',
+    department: 'Special Education',
+    room: 'Room 174',
+    subjects: [],
+    email: 'm.paris@dublinusd.org',
+    bio: 'Ms. Paris provides specialized instructional support and individualized programs for students with diverse learning needs.',
+    availability: 'Mon–Fri, by appointment',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670495/images/DUBLIN-EMHS1719018455492_thumb.jpg',
+  },
+
+  // ── Math: Mr. Putman ───────────────────────────────────────────────
+  {
+    id: 'math-010',
+    name: 'Mr. Putman',
+    title: 'Math Teacher',
+    department: 'Math',
+    room: 'Room 209',
+    subjects: ['Algebra I', 'Pre-Algebra'],
+    email: 'putman@dublinusd.org',
+    bio: 'Mr. Putman teaches foundational math courses, building strong arithmetic and algebraic foundations for all students.',
+    availability: 'Mon–Fri, Lunch',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1559075/images/DUBLIN-EMHS1691618564937_thumb.jpg',
+  },
+
+  // ── Support Staff ──────────────────────────────────────────────────
+  {
+    id: 'support-001',
+    name: 'Mario Alvarez Escobar',
+    title: 'Technology Technician',
+    department: 'Support',
+    room: 'Tech Office',
+    subjects: [],
+    email: 'm.alvarez@dublinusd.org',
+    bio: 'Mr. Alvarez Escobar handles technology infrastructure and device support across the EHS campus.',
+    availability: 'Mon–Fri, 7:30 AM–4:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1683933/images/DUBLIN-EMHS1722994472904_thumb.jpg',
+  },
+  {
+    id: 'support-002',
+    name: 'Karen Chamberlain',
+    title: 'Campus Supervisor',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'k.chamberlain@dublinusd.org',
+    bio: 'Ms. Chamberlain keeps the EHS campus safe and welcoming for all students and staff.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670502/images/DUBLIN-EMHS1719022526638_thumb.jpg',
+  },
+  {
+    id: 'support-003',
+    name: 'Kate Gillilan',
+    title: 'Campus Supervisor',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'k.gillilan@dublinusd.org',
+    bio: 'Ms. Gillilan supervises campus safety and student conduct throughout the school day.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1756270/images/DUBLIN-EMHS1741702176565_thumb.jpg',
+  },
+  {
+    id: 'support-004',
+    name: 'Louise Guzman',
+    title: 'Campus Supervisor',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'l.guzman@dublinusd.org',
+    bio: 'Ms. Guzman monitors campus safety and student wellbeing throughout the school day.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670504/images/DUBLIN-EMHS1719022815038_thumb.jpg',
+  },
+  {
+    id: 'support-005',
+    name: 'James Berry',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'j.berry@dublinusd.org',
+    bio: 'Mr. Berry provides instructional support to students in various classrooms across the EHS campus.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793021/images/DUBLIN-EMHS1754762578223_thumb.jpg',
+  },
+  {
+    id: 'support-006',
+    name: 'Sailakshmi Chitta',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 's.chitta@dublinusd.org',
+    bio: 'Ms. Chitta supports students with academic tasks and classroom activities across departments.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730311/images/DUBLIN-EMHS1731092212519_thumb.jpg',
+  },
+  {
+    id: 'support-007',
+    name: 'June Cook',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'j.cook@dublinusd.org',
+    bio: 'Ms. Cook provides individualized support to students, helping them access the curriculum effectively.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1683935/images/DUBLIN-EMHS1722994731376_thumb.jpg',
+  },
+  {
+    id: 'support-008',
+    name: 'Shubha Kandukoori',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 's.kandukoori@dublinusd.org',
+    bio: 'Ms. Kandukoori assists students with special needs in inclusive classroom settings.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793023/images/DUBLIN-EMHS1754762833324_thumb.jpg',
+  },
+  {
+    id: 'support-009',
+    name: 'Jennifer Kimbrough',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'j.kimbrough@dublinusd.org',
+    bio: 'Ms. Kimbrough provides targeted one-on-one and small group support for students.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1793025/images/DUBLIN-EMHS1754762967832_thumb.jpg',
+  },
+  {
+    id: 'support-010',
+    name: 'Khatira Masoomi',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'k.masoomi@dublinusd.org',
+    bio: 'Ms. Masoomi supports students in classrooms to ensure all learners can access instruction.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1824566/images/DUBLIN-EMHS1764698527267_thumb.jpg',
+  },
+  {
+    id: 'support-011',
+    name: 'Jaimala Patil',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'j.patil@dublinusd.org',
+    bio: 'Ms. Patil provides classroom support, helping students with diverse learning needs succeed.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1824564/images/DUBLIN-EMHS1764698256197_thumb.jpg',
+  },
+  {
+    id: 'support-012',
+    name: 'Danielle Powers',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'd.powers@dublinusd.org',
+    bio: 'Ms. Powers delivers individualized instructional assistance to support student learning goals.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1831793/images/DUBLIN-EMHS1771455117605_thumb.jpg',
+  },
+  {
+    id: 'support-013',
+    name: 'Adrianna Sanchez',
+    title: 'Instructional Assistant',
+    department: 'Support',
+    room: 'Various',
+    subjects: [],
+    email: 'a.sanchez@dublinusd.org',
+    bio: 'Ms. Sanchez supports students in classroom settings, providing academic and behavioral assistance.',
+    availability: 'School hours',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1835077/images/DUBLIN-EMHS1773762122689_thumb.jpg',
+  },
+  {
+    id: 'support-014',
+    name: 'Deysi Ayala',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'd.ayala@dublinusd.org',
+    bio: 'Ms. Ayala keeps the EHS campus clean and safe for all students and staff.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1676839/images/DUBLIN-EMHS1721756843719_thumb.jpg',
+  },
+  {
+    id: 'support-015',
+    name: 'David Cabrera',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'd.cabrera@dublinusd.org',
+    bio: 'Mr. Cabrera maintains the EHS facilities, ensuring a clean and comfortable learning environment.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1810332/images/DUBLIN-EMHS1757964346353_thumb.jpg',
+  },
+  {
+    id: 'support-016',
+    name: 'Cassarah Jones',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'c.jones@dublinusd.org',
+    bio: 'Ms. Jones works to maintain a clean and orderly campus environment at EHS.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730308/images/DUBLIN-EMHS1731091930220_thumb.jpg',
+  },
+  {
+    id: 'support-017',
+    name: 'Ana Martinez',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'a.martinez@dublinusd.org',
+    bio: 'Ms. Martinez helps keep EHS facilities spotless and ready for learning every day.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730306/images/DUBLIN-EMHS1731091834071_thumb.jpg',
+  },
+  {
+    id: 'support-018',
+    name: 'Carly Mendoza',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'c.mendoza@dublinusd.org',
+    bio: 'Ms. Mendoza is part of the dedicated EHS custodial team that keeps campus facilities clean.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670506/images/DUBLIN-EMHS1719023129896_thumb.jpg',
+  },
+  {
+    id: 'support-019',
+    name: 'Jorge Milan',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'j.milan@dublinusd.org',
+    bio: 'Mr. Milan maintains the EHS campus, ensuring all facilities are clean and well-maintained.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1670508/images/DUBLIN-EMHS1719023384845_thumb.jpg',
+  },
+  {
+    id: 'support-020',
+    name: 'Cynthia Perkins',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'c.perkins@dublinusd.org',
+    bio: 'Ms. Perkins works to provide a clean, safe environment for all students and staff at EHS.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1810334/images/DUBLIN-EMHS1757964600447_thumb.jpg',
+  },
+  {
+    id: 'support-021',
+    name: 'Alvin Pineda',
+    title: 'Custodian',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'a.pineda@dublinusd.org',
+    bio: 'Mr. Pineda is a key member of the custodial team keeping EHS classrooms and common areas clean.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1762583/images/DUBLIN-EMHS1746816956635_thumb.jpg',
+  },
+  {
+    id: 'support-022',
+    name: 'Joel Wheeler',
+    title: 'Grounds',
+    department: 'Support',
+    room: 'Campus',
+    subjects: [],
+    email: 'j.wheeler@dublinusd.org',
+    bio: 'Mr. Wheeler maintains EHS grounds, landscaping, and outdoor facilities throughout the year.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1689292/images/DUBLIN-EMHS1723172466681_thumb.jpg',
+  },
+  {
+    id: 'support-023',
+    name: 'Sherrie Harleman',
+    title: 'Nutrition Lead',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 's.harleman@dublinusd.org',
+    bio: 'Ms. Harleman leads the EHS nutrition team, ensuring students have access to healthy meals every day.',
+    availability: 'Mon–Fri, 7:00 AM–2:00 PM',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1689291/images/DUBLIN-EMHS1733331443991_thumb.jpg',
+  },
+  {
+    id: 'support-024',
+    name: 'Daniel Cummins',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 'd.cummins@dublinusd.org',
+    bio: 'Mr. Cummins is part of the EHS nutrition team, serving students nutritious meals daily.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730303/images/DUBLIN-EMHS1731091403140_thumb.jpg',
+  },
+  {
+    id: 'support-025',
+    name: 'Sarira Gharavi',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 's.gharavi@dublinusd.org',
+    bio: 'Ms. Gharavi serves on the EHS nutrition team, helping provide healthy meals to all students.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730301/images/DUBLIN-EMHS1731091075026_thumb.jpg',
+  },
+  {
+    id: 'support-026',
+    name: 'Noelia Gimeno',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 'n.gimeno@dublinusd.org',
+    bio: 'Ms. Gimeno is a valued member of the EHS cafeteria team.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730305/images/DUBLIN-EMHS1731091707336_thumb.jpg',
+  },
+  {
+    id: 'support-027',
+    name: 'Kathy Houk',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 'k.houk@dublinusd.org',
+    bio: 'Ms. Houk has been a dedicated member of the EHS nutrition team for many years.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1585451/images/DUBLIN-EMHS1691078539676_thumb.jpg',
+  },
+  {
+    id: 'support-028',
+    name: 'Eunyoung Lee',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 'e.lee@dublinusd.org',
+    bio: 'Ms. Lee works on the EHS nutrition team, ensuring students receive healthy daily meals.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1810333/images/DUBLIN-EMHS1757964495465_thumb.jpg',
+  },
+  {
+    id: 'support-029',
+    name: 'Irene Susanti',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 'i.susanti@dublinusd.org',
+    bio: 'Ms. Susanti serves students as part of the EHS cafeteria and nutrition services team.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730300/images/DUBLIN-EMHS1731090910637_thumb.jpg',
+  },
+  {
+    id: 'support-030',
+    name: 'Serina Wong',
+    title: 'Nutrition Staff',
+    department: 'Support',
+    room: 'Cafeteria',
+    subjects: [],
+    email: 's.wong@dublinusd.org',
+    bio: 'Ms. Wong is part of the team that keeps EHS students fueled with quality meals every school day.',
+    photoUrl: 'https://ehs.dublinusd.org/ourpages/auto/profiles/1730302/images/DUBLIN-EMHS1731091305408_thumb.jpg',
+  },
+
 ];
 
 export const departments: Department[] = [
