@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { standardSchedule, minimumDaySchedule, timeToMinutes, formatTime } from '@/data/schedule';
+import { getTodaySchedule, timeToMinutes, formatTime } from '@/data/schedule';
 
 type Tab = 'home' | 'schedule' | 'map' | 'staff' | 'classes' | 'voice' | 'lunch' | 'calendar' | 'resources';
 
@@ -13,7 +13,6 @@ interface HeaderProps {
 
 function LiveTicker() {
   const [now, setNow] = useState<Date | null>(null);
-  const [scheduleType] = useState<'standard' | 'minimum'>('standard');
 
   useEffect(() => {
     setNow(new Date());
@@ -23,7 +22,7 @@ function LiveTicker() {
 
   if (!now) return null;
 
-  const schedule = scheduleType === 'standard' ? standardSchedule : minimumDaySchedule;
+  const schedule = getTodaySchedule();
   const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
   let currentPeriod = null;

@@ -445,7 +445,7 @@ export default function Hero({ onNavigate }: HeroProps) {
     {
       icon: '👥',
       title: 'Staff Directory',
-      desc: '70+ staff members',
+      desc: '100+ staff members',
       tab: 'staff' as Tab,
       bold: 'Meet your teachers.',
       copy: 'Comprehensive directory with contact info, office hours, and subjects.',
@@ -505,7 +505,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
             <span className="font-dm-mono text-xs text-emerald-600 dark:text-emerald-400 tracking-wider">
-              2024–2025 SCHOOL YEAR
+              2025–2026 SCHOOL YEAR
             </span>
           </div>
 
@@ -576,8 +576,8 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition: 'opacity 0.8s ease 400ms',
           }}
         >
-          <StatCounter value="100+" label="Courses offered" delay={0} />
-          <StatCounter value="70+" label="Faculty & staff" delay={100} />
+          <StatCounter value="150+" label="Courses offered" delay={0} />
+          <StatCounter value="100+" label="Faculty & staff" delay={100} />
           <StatCounter value="6" label="Academic periods" delay={200} />
           <StatCounter value="Live" label="Bell schedule" delay={300} />
         </div>
@@ -617,7 +617,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
             <DemoCard
               title="Staff Directory"
-              description="70+ faculty & staff"
+              description="100+ faculty & staff"
               icon={<svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
               tab="staff"
               color="#3b82f6"

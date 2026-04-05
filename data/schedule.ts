@@ -19,7 +19,8 @@ export type DayType =
   | 'wednesday'
   | 'thursday'
   | 'friday'
-  | 'weekend';
+  | 'weekend'
+  | 'finals';
 
 export interface Period {
   id: string;
@@ -506,6 +507,45 @@ export function getCurrentPeriod(schedule: DaySchedule): {
 
   return { period: activePeriod, nextPeriod, minutesRemaining, progress };
 }
+
+// ============================================================
+// FINALS — Dec 17–19, 2025 (2025–26 school year)
+// Wed Dec 17: Periods 6 & 5 finals
+// Thu Dec 18: Periods 4 & 3 finals
+// Fri Dec 19: Periods 2 & 1 finals
+// ============================================================
+export const finalsWedSchedule: DaySchedule = {
+  name: 'Finals — Wed Dec 17',
+  dayType: 'finals',
+  label: 'Finals – Period 6 & 5 (Dec 17, 2025)',
+  periods: [
+    { id: 'fin-w-p6', name: 'Period 6 Final', startTime: '08:30', endTime: '10:30', type: 'class', blockDay: true },
+    { id: 'fin-w-brk', name: 'Break', startTime: '10:30', endTime: '10:45', type: 'break' },
+    { id: 'fin-w-p5', name: 'Period 5 Final', startTime: '10:52', endTime: '12:52', type: 'class', blockDay: true },
+  ],
+};
+
+export const finalsThuSchedule: DaySchedule = {
+  name: 'Finals — Thu Dec 18',
+  dayType: 'finals',
+  label: 'Finals – Period 4 & 3 (Dec 18, 2025)',
+  periods: [
+    { id: 'fin-t-p4', name: 'Period 4 Final', startTime: '08:30', endTime: '10:30', type: 'class', blockDay: true },
+    { id: 'fin-t-brk', name: 'Break', startTime: '10:30', endTime: '10:45', type: 'break' },
+    { id: 'fin-t-p3', name: 'Period 3 Final', startTime: '10:52', endTime: '12:52', type: 'class', blockDay: true },
+  ],
+};
+
+export const finalsFriSchedule: DaySchedule = {
+  name: 'Finals — Fri Dec 19',
+  dayType: 'finals',
+  label: 'Finals – Period 2 & 1 (Dec 19, 2025)',
+  periods: [
+    { id: 'fin-f-p2', name: 'Period 2 Final', startTime: '08:30', endTime: '10:30', type: 'class', blockDay: true },
+    { id: 'fin-f-brk', name: 'Break', startTime: '10:30', endTime: '10:45', type: 'break' },
+    { id: 'fin-f-p1', name: 'Period 1 Final', startTime: '10:52', endTime: '12:52', type: 'class', blockDay: true },
+  ],
+};
 
 // ============================================================
 // Legacy exports (backwards-compatibility with old BellSchedule)

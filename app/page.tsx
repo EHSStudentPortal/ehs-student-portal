@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import Header from './components/Header';
 import BellSchedule from './components/BellSchedule';
 import CampusMap from './components/CampusMap';
@@ -146,18 +147,21 @@ export default function Home() {
                 Dublin, CA 94568
               </span>
               <span className="w-px h-3 bg-emerald-200 dark:bg-emerald-900" />
-              <a
+              <Link
                 href="/admin"
                 className="font-dm-mono text-xs text-emerald-500 hover:text-emerald-600 transition-colors"
               >
                 Admin ↗
-              </a>
+              </Link>
             </div>
           </div>
 
-          <div className="mt-8 pt-6 border-t text-center" style={{ borderColor: 'var(--border-light)' }}>
+          <div className="mt-8 pt-6 border-t text-center space-y-2" style={{ borderColor: 'var(--border-light)' }}>
             <p className="font-dm-mono text-[10px] tracking-wider" style={{ color: 'var(--text-subtle)' }}>
-              EMERALD HIGH SCHOOL STUDENT PORTAL • DUBLIN UNIFIED SCHOOL DISTRICT • 2024–2025
+              EMERALD HIGH SCHOOL STUDENT PORTAL • DUBLIN UNIFIED SCHOOL DISTRICT • 2025–2026
+            </p>
+            <p className="font-dm-sans text-[11px]" style={{ color: 'var(--text-subtle)' }}>
+              This is an unofficial, student-created resource. Not affiliated with or endorsed by Dublin Unified School District or Emerald High School.
             </p>
           </div>
         </div>
