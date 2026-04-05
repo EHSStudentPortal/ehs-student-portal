@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/colors';
 
@@ -16,17 +16,23 @@ export default function ScreenHeader({ title, subtitle, right, badge, badgeColor
 
   return (
     <View
-      style={{ paddingTop: insets.top + 12, backgroundColor: Colors.bgSecondary, borderBottomColor: Colors.border, borderBottomWidth: 1 }}
-      className="px-5 pb-4"
+      style={{
+        paddingTop: insets.top + 12,
+        paddingBottom: 16,
+        paddingHorizontal: 20,
+        backgroundColor: Colors.bgSecondary,
+        borderBottomColor: Colors.border,
+        borderBottomWidth: 1,
+      }}
     >
-      <View className="flex-row items-center justify-between">
-        <View className="flex-1">
-          <View className="flex-row items-center gap-2 mb-0.5">
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <View style={{ flex: 1 }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 2 }}>
             <Text style={{ color: Colors.textPrimary, fontFamily: 'Syne_700Bold', fontSize: 22 }}>
               {title}
             </Text>
             {badge && (
-              <View style={{ backgroundColor: badgeColor ?? Colors.emerald800 }} className="px-2 py-0.5 rounded-full">
+              <View style={{ backgroundColor: badgeColor ?? Colors.emerald800, paddingHorizontal: 8, paddingVertical: 2, borderRadius: 100 }}>
                 <Text style={{ color: Colors.emerald400, fontFamily: 'DMMono_400Regular', fontSize: 10 }}>
                   {badge}
                 </Text>
