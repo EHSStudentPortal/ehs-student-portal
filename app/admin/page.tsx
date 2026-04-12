@@ -4,7 +4,27 @@ import { useState, useEffect, useMemo } from 'react';
 import { seedFeedback, feedbackCategories, type FeedbackItem, type FeedbackStatus } from '@/data/feedback';
 
 const STORAGE_KEY = 'ehs-schoolvoice-feedback';
-const ADMIN_PW = 'ehsadmin2025';
+const LOCKOUT_ATTEMPTS = 5;
+const LOCKOUT_MS = 30 * 60 * 1000;
+
+async function hashPassword(pw: string): Promise<string> {
+  const buf = await window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function getLoginState(): { attempts: number; lockedUntil: number } {
+  try {
+    const s = localStorage.getItem('ehs-admin-login-state');
+    if (s) return JSON.parse(s);
+  } catch {}
+  return { attempts: 0, lockedUntil: 0 };
+}
+
+function setLoginState(attempts: number, lockedUntil: number) {
+  try {
+    localStorage.setItem('ehs-admin-login-state', JSON.stringify({ attempts, lockedUntil }));
+  } catch {}
+}
 
 function loadFeedback(): FeedbackItem[] {
   if (typeof window === 'undefined') return seedFeedback;
@@ -188,17 +208,38 @@ export default function AdminPage() {
       setAuthenticated(true);
       setFeedback(loadFeedback());
     }
+    const { lockedUntil } = getLoginState();
+    if (Date.now() < lockedUntil) {
+      const mins = Math.ceil((lockedUntil - Date.now()) / 60000);
+      setError(`Too many failed attempts. Try again in ${mins} minute${mins !== 1 ? 's' : ''}.`);
+    }
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PW) {
+    const { attempts, lockedUntil } = getLoginState();
+    if (Date.now() < lockedUntil) {
+      const mins = Math.ceil((lockedUntil - Date.now()) / 60000);
+      setError(`Too many failed attempts. Try again in ${mins} minute${mins !== 1 ? 's' : ''}.`);
+      return;
+    }
+    const inputHash = await hashPassword(password);
+    const storedHash = process.env.NEXT_PUBLIC_ADMIN_PW_HASH;
+    if (storedHash && inputHash === storedHash) {
       setAuthenticated(true);
       setError('');
+      setLoginState(0, 0);
       localStorage.setItem('ehs-admin-auth', 'true');
       setFeedback(loadFeedback());
     } else {
-      setError('Incorrect password. Please try again.');
+      const next = attempts + 1;
+      const lock = next >= LOCKOUT_ATTEMPTS ? Date.now() + LOCKOUT_MS : 0;
+      setLoginState(next, lock);
+      if (next >= LOCKOUT_ATTEMPTS) {
+        setError('Too many failed attempts. Admin locked for 30 minutes.');
+      } else {
+        setError(`Incorrect password. ${LOCKOUT_ATTEMPTS - next} attempt${LOCKOUT_ATTEMPTS - next !== 1 ? 's' : ''} remaining.`);
+      }
     }
   };
 

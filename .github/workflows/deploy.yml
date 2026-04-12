@@ -30,6 +30,7 @@ jobs:
       - run: npm run build
         env:
           GITHUB_ACTIONS: true
+          NEXT_PUBLIC_ADMIN_PW_HASH: ${{ secrets.ADMIN_PW_HASH }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
