@@ -34,9 +34,9 @@ interface PolicyCard {
 
 const DISTRICT_PORTALS: PortalCard[] = [
   {
-    name: 'Genesis Parent Portal',
+    name: 'Infinite Campus — DUSD',
     description: 'View grades, attendance & schedules',
-    href: 'https://parents.dublinusd.org',
+    href: 'https://dublin-ca.infinitecampus.org/campus/portal/dublin.jsp',
     icon: '📊',
     color: 'blue',
   },
@@ -542,6 +542,247 @@ export default function ResourcesHub({ onNavigate: _onNavigate }: { onNavigate?:
             >
               DUSD Website <ExternalLinkIcon />
             </a>
+          </div>
+        </section>
+
+        {/* Section 7: School Store */}
+        <section
+          className="rounded-3xl overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, #064e3b 0%, #065f46 50%, #1d4ed8 100%)',
+            boxShadow: '0 8px 32px rgba(6,78,59,0.3)',
+          }}
+        >
+          <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center text-3xl shadow-lg">
+              🛍️
+            </div>
+            <div className="flex-1 text-center sm:text-left">
+              <h2 className="font-syne font-black text-xl text-white mb-1">Emerald High School Store</h2>
+              <p className="font-dm-sans text-sm text-white/70 mb-4">
+                Order EHS spirit wear, PE uniforms, and more through the official school webstore.
+              </p>
+              <a
+                href="https://emeraldwebstore.myschoolcentral.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-emerald-800 font-dm-sans font-bold text-sm hover:bg-emerald-50 transition-all duration-200 hover:-translate-y-0.5 shadow-lg"
+              >
+                Open School Store
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+            <div className="hidden sm:flex flex-col items-center gap-1 text-white/30 flex-shrink-0">
+              <span className="font-dm-mono text-[10px] tracking-widest uppercase">Powered by</span>
+              <span className="font-syne font-bold text-xs text-white/50">MySchoolCentral</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 8: Social Media */}
+        <section>
+          <SectionHeader
+            icon="📱"
+            title="EHS on Social Media"
+            subtitle="Follow Emerald High clubs, teams, and official accounts on Instagram"
+          />
+
+          {/* Featured / Official */}
+          <div className="mb-6">
+            <div className="font-dm-mono text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>Official &amp; Core</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {[
+                { handle: 'theemeraldhigh',       name: 'Emerald High School',       desc: 'Official school account — 2,800+ followers' },
+                { handle: 'ehsaerouants',         name: 'EHS Athletics',             desc: 'Official Aeronauts athletics page' },
+                { handle: 'ehspfso',              name: 'EHS PFSO',                  desc: 'Parent Faculty Student Organization' },
+                { handle: 'dr.principal_rojas',   name: 'Dr. Rojas — Principal',     desc: 'Principal Francis A. Rojas, Ed.D.' },
+                { handle: 'ehscollegecareerctr',  name: 'EHS College & Career Ctr',  desc: 'College & career resources' },
+                { handle: 'ehsacademicfdn',       name: 'Emerald Academic Foundation', desc: 'EAF — supporting EHS students' },
+              ].map(({ handle, name, desc }) => (
+                <a
+                  key={handle}
+                  href={`https://www.instagram.com/${handle}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 px-4 py-3 rounded-2xl transition-all duration-200 hover:-translate-y-0.5"
+                  style={{ background: 'var(--bg-glass)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}
+                >
+                  <div className="w-9 h-9 rounded-xl flex-shrink-0 flex items-center justify-center text-white font-bold text-xs"
+                    style={{ background: 'linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)' }}>
+                    IG
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-dm-sans font-semibold text-sm truncate group-hover:text-emerald-600 transition-colors" style={{ color: 'var(--text-primary)' }}>{name}</div>
+                    <div className="font-dm-mono text-[10px] truncate" style={{ color: 'var(--text-muted)' }}>@{handle} · {desc}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Class Accounts */}
+          <div className="mb-6">
+            <div className="font-dm-mono text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>Class Accounts</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+              {[
+                { handle: 'emeraldhigh27',        name: 'Class of 2027' },
+                { handle: 'emeraldhigh28',        name: "Class of '28" },
+                { handle: 'ehs.class.of.2028',    name: 'Class of 2028' },
+                { handle: 'ehs_class_of_2029',    name: 'Class of 2029' },
+              ].map(({ handle, name }) => (
+                <a
+                  key={handle}
+                  href={`https://www.instagram.com/${handle}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2.5 px-3 py-2.5 rounded-xl transition-all hover:-translate-y-0.5"
+                  style={{ background: 'var(--bg-glass)', border: '1px solid var(--border-light)' }}
+                >
+                  <span className="text-lg flex-shrink-0">🎓</span>
+                  <div className="min-w-0">
+                    <div className="font-dm-sans font-semibold text-xs truncate group-hover:text-emerald-600 transition-colors" style={{ color: 'var(--text-primary)' }}>{name}</div>
+                    <div className="font-dm-mono text-[10px] truncate" style={{ color: 'var(--text-muted)' }}>@{handle}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Athletics */}
+          <div className="mb-6">
+            <div className="font-dm-mono text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>Athletics &amp; Sports</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {[
+                { handle: 'emeraldhighschool_soccer',  name: 'Soccer',              emoji: '⚽' },
+                { handle: 'love_and_rebounds',         name: 'Coach Rock',          emoji: '🏀' },
+                { handle: 'emeraldhighfootball',       name: 'Football',            emoji: '🏈' },
+                { handle: 'emerald_boys_basketball',   name: 'Boys Basketball',     emoji: '🏀' },
+                { handle: 'emeraldgirlsbasketball',    name: 'Girls Basketball',    emoji: '🏀' },
+                { handle: 'emerald.girls.soccerjv',    name: 'Girls JV Soccer',     emoji: '⚽' },
+                { handle: 'volleyballehsgirls',        name: 'Girls Volleyball',    emoji: '🏐' },
+                { handle: 'emerald.trackandfield',     name: 'Track & Field',       emoji: '🏃' },
+                { handle: 'emeraldhigh.swim',          name: 'Swim Team',           emoji: '🏊' },
+                { handle: 'emerald_baseball',          name: 'Baseball',            emoji: '⚾' },
+                { handle: 'emerald_aero_tennis',       name: 'Tennis',              emoji: '🎾' },
+                { handle: 'emerald_xc',                name: 'Cross Country',       emoji: '🏃' },
+                { handle: 'ehs__badminton',            name: 'Badminton',           emoji: '🏸' },
+                { handle: 'emeraldhigh.archery',       name: 'Archery',             emoji: '🎯' },
+                { handle: 'emeraldhighcheer',          name: 'Aeronauts Cheer',     emoji: '📣' },
+                { handle: 'theemeralduavs',            name: 'EmeraldUAVs / Drone', emoji: '🚁' },
+              ].map(({ handle, name, emoji }) => (
+                <a
+                  key={handle}
+                  href={`https://www.instagram.com/${handle}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2.5 px-3 py-2.5 rounded-xl transition-all hover:-translate-y-0.5"
+                  style={{ background: 'var(--bg-glass)', border: '1px solid var(--border-light)' }}
+                >
+                  <span className="text-base flex-shrink-0">{emoji}</span>
+                  <div className="min-w-0">
+                    <div className="font-dm-sans font-semibold text-xs truncate group-hover:text-emerald-600 transition-colors" style={{ color: 'var(--text-primary)' }}>{name}</div>
+                    <div className="font-dm-mono text-[10px] truncate" style={{ color: 'var(--text-muted)' }}>@{handle}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Clubs & Orgs */}
+          <div className="mb-6">
+            <div className="font-dm-mono text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>Clubs &amp; Organizations</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {[
+                { handle: 'ehs_tech_entrepreneurs',         name: 'Tech Entrepreneurs',        emoji: '💻' },
+                { handle: 'emeraldhigh.nami',               name: 'NAMI — Mental Health',       emoji: '🧠' },
+                { handle: 'emeralds_isa',                   name: 'Indian Student Association', emoji: '🇮🇳' },
+                { handle: 'emerald.lead',                   name: 'Leadership',                 emoji: '⭐' },
+                { handle: 'ehs_words_fortheworld',          name: 'Words for the World',        emoji: '✍️' },
+                { handle: 'emeraldazaad',                   name: 'Azaad — Cultural Club',      emoji: '🌺' },
+                { handle: 'emerald_yb',                     name: 'Yearbook',                   emoji: '📸' },
+                { handle: 'emerald_scienceolympiad',        name: 'Science Olympiad',           emoji: '🔬' },
+                { handle: 'emerald_swenext',                name: 'Society of Women Engineers', emoji: '⚙️' },
+                { handle: 'ehs_debate24',                   name: 'Speech & Debate',            emoji: '🎤' },
+                { handle: 'emeraldphotographyy_',           name: 'Photography Club',           emoji: '📷' },
+                { handle: 'emeraldsnhs',                    name: 'Science NHS',                emoji: '🏅' },
+                { handle: 'ehs.biotech',                    name: 'Biotech Club',               emoji: '🧬' },
+                { handle: 'emeralddeca',                    name: 'DECA',                       emoji: '📈' },
+                { handle: 'emerald.culinary',               name: 'Culinary',                   emoji: '🍳' },
+                { handle: 'emerald.bestbuddies',            name: 'Best Buddies',               emoji: '🤝' },
+                { handle: 'emeraldmsa',                     name: 'Muslim Student Association', emoji: '☪️' },
+                { handle: 'emeraldhs.keyclub',              name: 'Key Club',                   emoji: '🔑' },
+                { handle: 'emerald_avid',                   name: 'AVID',                       emoji: '📚' },
+                { handle: 'emeraldacts_ofhearts',           name: 'Acts of Hearts',             emoji: '❤️' },
+                { handle: 'ehs.academic_decathlon',         name: 'Academic Decathlon',         emoji: '🏆' },
+                { handle: 'ehs.mandarin.honor.society',     name: 'Mandarin Honor Society',     emoji: '🀄' },
+                { handle: 'emerald_csf',                    name: 'CSF',                        emoji: '📋' },
+                { handle: 'ehs.aero.colorguard',            name: 'Color Guard',                emoji: '🚩' },
+                { handle: 'emerald_modelun',                name: 'Model UN',                   emoji: '🌍' },
+                { handle: 'ehs_ipsyo',                      name: 'IPsyO',                      emoji: '🧩' },
+                { handle: 'emerald_bsu',                    name: 'Black Student Union',        emoji: '✊' },
+                { handle: 'emeraldenggsociety',             name: 'Engineering Society',        emoji: '🔩' },
+                { handle: 'ehsliteratureclub',              name: 'Literature Club',            emoji: '📖' },
+                { handle: 'ehs_safeclub',                   name: 'SAFE Club',                  emoji: '🛡️' },
+                { handle: 'ehs_fsu',                        name: 'Feminist Student Union',     emoji: '♀️' },
+                { handle: 'ehs.national.honor.society.nhs', name: 'NHS',                        emoji: '🎖️' },
+                { handle: 'emeraldhosa',                    name: 'HOSA',                       emoji: '🏥' },
+                { handle: 'emerald_nachna',                 name: 'Nachna — Dance',             emoji: '💃' },
+                { handle: 'ehs.aero.danceteam',             name: 'Dance Team',                 emoji: '🩰' },
+                { handle: 'ehs_aerovision',                 name: 'AeroVision',                 emoji: '🎬' },
+                { handle: 'emeraldcompetitivehistory',      name: 'Competitive History',        emoji: '🏛️' },
+                { handle: 'ehs_wellnessambassadors',        name: 'Wellness Ambassadors',       emoji: '🌿' },
+                { handle: 'emerald.tupe',                   name: 'TUPE',                       emoji: '🎭' },
+              ].map(({ handle, name, emoji }) => (
+                <a
+                  key={handle}
+                  href={`https://www.instagram.com/${handle}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2.5 px-3 py-2.5 rounded-xl transition-all hover:-translate-y-0.5"
+                  style={{ background: 'var(--bg-glass)', border: '1px solid var(--border-light)' }}
+                >
+                  <span className="text-base flex-shrink-0">{emoji}</span>
+                  <div className="min-w-0">
+                    <div className="font-dm-sans font-semibold text-xs truncate group-hover:text-emerald-600 transition-colors" style={{ color: 'var(--text-primary)' }}>{name}</div>
+                    <div className="font-dm-mono text-[10px] truncate" style={{ color: 'var(--text-muted)' }}>@{handle}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Music & Arts */}
+          <div>
+            <div className="font-dm-mono text-[10px] uppercase tracking-widest mb-3" style={{ color: 'var(--text-muted)' }}>Music &amp; Arts</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {[
+                { handle: 'emeraldhsmusic',      name: 'EHS Music Dept',    emoji: '🎵' },
+                { handle: 'emeraldhsband',       name: 'EHS Band',          emoji: '🎺' },
+                { handle: 'ehs.saxes_',          name: 'EHS Saxes',         emoji: '🎷' },
+                { handle: 'emeraldhs_trumpets',  name: 'EHS High Brass',    emoji: '🎺' },
+                { handle: 'emeraldhs.trombones', name: 'EHS Trombones',     emoji: '🎼' },
+                { handle: 'emeraldpercussion',   name: 'EHS Percussion',    emoji: '🥁' },
+                { handle: 'emeraldorchestra',    name: 'EHS Orchestra',     emoji: '🎻' },
+                { handle: 'theclub.studio25',    name: 'Emerald Club Studio', emoji: '🎙️' },
+              ].map(({ handle, name, emoji }) => (
+                <a
+                  key={handle}
+                  href={`https://www.instagram.com/${handle}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2.5 px-3 py-2.5 rounded-xl transition-all hover:-translate-y-0.5"
+                  style={{ background: 'var(--bg-glass)', border: '1px solid var(--border-light)' }}
+                >
+                  <span className="text-base flex-shrink-0">{emoji}</span>
+                  <div className="min-w-0">
+                    <div className="font-dm-sans font-semibold text-xs truncate group-hover:text-emerald-600 transition-colors" style={{ color: 'var(--text-primary)' }}>{name}</div>
+                    <div className="font-dm-mono text-[10px] truncate" style={{ color: 'var(--text-muted)' }}>@{handle}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 

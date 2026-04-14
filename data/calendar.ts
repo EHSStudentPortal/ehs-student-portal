@@ -56,7 +56,7 @@ export const events: CalendarEvent[] = [
     title: 'First Day of School',
     date: '2025-08-14',
     type: 'academic',
-    description: 'Welcome back, Shamrocks! The 2025–26 school year begins. All students report to first period.',
+    description: 'Welcome back, Aeronauts! The 2025–26 school year begins. All students report to first period.',
     icon: '🎒',
   },
   {

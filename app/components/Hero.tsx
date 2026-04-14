@@ -765,7 +765,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
         <div className="max-w-4xl mx-auto text-center relative">
           <div className="font-dm-mono text-xs tracking-widest uppercase text-emerald-400/60 mb-4">
-            Emerald High School • Go Shamrocks!
+            Emerald High School • Go Aeronauts!
           </div>
           <h2 className="font-syne font-black text-3xl sm:text-4xl text-white mb-4">
             Built for EHS students, <br className="hidden sm:block" />

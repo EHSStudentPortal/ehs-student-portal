@@ -27,10 +27,10 @@ const BUILDINGS: Building[] = [
   { id: 'bldg-f', name: 'Building F – Academic Tower 1', abbr: 'F', description: 'English and Social Science classrooms. Rooms 100–112 (English) and 150–156 (Social Science/History).', rooms: ['Room 100','Room 101','Room 102','Room 103','Room 104','Room 105','Room 106','Room 107','Room 108','Room 109','Room 110','Room 150','Room 151','Room 152','Room 153','Room 154','Room 155'], color: '#3b82f6', x: 205, y: 165, w: 140, h: 85 },
   { id: 'bldg-g', name: 'Building G – Academic Tower 2', abbr: 'G', description: 'Math, Computer Science, Science, Engineering, and World Language classrooms. Rooms 200–215, 250–260, 300–310.', rooms: ['Room 200','Room 201','Room 202','Room 203','Room 204','Room 205','Room 206','Room 207','Room 208','Room 209','Room 210','Room 214','Room 215','Room 250','Room 251','Room 252','Room 253','Room 254','Room 255','Room 256','Room 300','Room 301','Room 302','Room 303','Room 304','Room 305','Room 306','Room 307','Room 308','Room 309'], color: '#2563eb', x: 360, y: 165, w: 140, h: 85 },
   { id: 'quad', name: 'Main Quad', abbr: 'QD', description: 'Central gathering space for students during break and lunch. Hosts assemblies and outdoor events.', rooms: ['Main Quad'], color: '#22c55e', x: 205, y: 75, w: 125, h: 75 },
-  { id: 'gym', name: 'Building M – Gymnasium', abbr: 'M', description: 'Full-size gymnasium for basketball, volleyball, and large-group PE. Home of Shamrocks home games and school assemblies.', rooms: ['Main Gym', 'Dance Studio', 'Wrestling Room', 'Athletic Training Room'], color: '#f97316', x: 590, y: 270, w: 90, h: 75 },
+  { id: 'gym', name: 'Building M – Gymnasium', abbr: 'M', description: 'Full-size gymnasium for basketball, volleyball, and large-group PE. Home of Aeronauts home games and school assemblies.', rooms: ['Main Gym', 'Dance Studio', 'Wrestling Room', 'Athletic Training Room'], color: '#f97316', x: 590, y: 270, w: 90, h: 75 },
   { id: 'locker', name: 'Building L – Locker & Weight Rooms', abbr: 'L', description: 'Boys and girls locker rooms, weight room, and strength & conditioning facility.', rooms: ['Boys Locker Room', 'Girls Locker Room', 'Weight Room', 'Strength & Conditioning'], color: '#ea580c', x: 590, y: 165, w: 90, h: 95 },
   { id: 'tennis', name: 'Tennis Courts', abbr: 'TC', description: '6 full-size tennis courts used for PE and EHS tennis team practices and matches.', rooms: ['Court 1','Court 2','Court 3','Court 4','Court 5','Court 6'], color: '#4ade80', x: 60, y: 365, w: 130, h: 85 },
-  { id: 'stadium', name: 'EHS Stadium & Athletic Fields', abbr: 'STD', description: 'Football/soccer field with track, bleachers, and press box. Home of EHS Shamrocks home games and track & field.', rooms: ['Football Field', 'Track', 'Soccer Field', 'Bleachers', 'Concession Stand'], color: '#16a34a', x: 205, y: 365, w: 370, h: 95, shape: 'oval' },
+  { id: 'stadium', name: 'EHS Stadium & Athletic Fields', abbr: 'STD', description: 'Football/soccer field with track, bleachers, and press box. Home of EHS Aeronauts home games and track & field.', rooms: ['Football Field', 'Track', 'Soccer Field', 'Bleachers', 'Concession Stand'], color: '#16a34a', x: 205, y: 365, w: 370, h: 95, shape: 'oval' },
   { id: 'wellness', name: 'Wellness Center', abbr: 'WC', description: 'Student mental health and wellness support. Drop-in welcome. Houses school psychologists and wellness counselors.', rooms: ['Wellness Center', 'Counselor Office', 'Private Session Room'], color: '#06b6d4', x: 510, y: 270, w: 70, h: 80 },
 ];
 
@@ -66,6 +66,7 @@ export default function CampusMap() {
   const [selected, setSelected] = useState<Building | null>(null);
   const [origin, setOrigin] = useState<Building | null>(null);
   const [destination, setDestination] = useState<Building | null>(null);
+  const [viewMode, setViewMode] = useState<'schematic' | 'satellite'>('schematic');
   const [staffQuery, setStaffQuery] = useState('');
   const [staffResults, setStaffResults] = useState<typeof staff>([]);
   const [zoom, setZoom] = useState(1);
@@ -182,6 +183,16 @@ export default function CampusMap() {
                   <span className="ml-2 font-dm-mono text-[11px] text-white/30">EHS CAMPUS · DUBLIN, CA</span>
                 </div>
                 <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={() => setViewMode(v => v === 'schematic' ? 'satellite' : 'schematic')}
+                    className="px-2.5 h-7 rounded-lg text-[11px] font-dm-mono transition-all flex items-center gap-1"
+                    style={{
+                      background: viewMode === 'satellite' ? '#10b981' : 'rgba(255,255,255,0.08)',
+                      color: viewMode === 'satellite' ? 'white' : 'rgba(255,255,255,0.5)',
+                    }}
+                  >
+                    🛰 {viewMode === 'satellite' ? 'Satellite' : 'Schematic'}
+                  </button>
                   <button onClick={() => setZoom(z => Math.min(3, z + 0.25))}
                     className="w-7 h-7 rounded-lg bg-white/8 text-white/60 hover:bg-white/15 text-base font-bold flex items-center justify-center transition-all">+</button>
                   <span className="font-dm-mono text-[11px] text-white/40 w-11 text-center">{Math.round(zoom * 100)}%</span>
@@ -226,11 +237,15 @@ export default function CampusMap() {
 
                   {/* Ground */}
                   <rect x="0" y="0" width={MAP_W} height={MAP_H} fill="#0d1a10" />
-                  {/* Campus boundary */}
-                  <rect x="48" y="12" width="724" height={MAP_H - 22} rx="10" fill="#132318" stroke="#1d3a23" strokeWidth="1.5" />
+                  {viewMode === 'satellite' ? (
+                    <image href="/school.png" x="0" y="0" width={MAP_W} height={MAP_H} preserveAspectRatio="xMidYMid slice" />
+                  ) : (
+                    /* Campus boundary */
+                    <rect x="48" y="12" width="724" height={MAP_H - 22} rx="10" fill="#132318" stroke="#1d3a23" strokeWidth="1.5" />
+                  )}
 
-                  {/* Walkways */}
-                  {[
+                  {/* Walkways — schematic only */}
+                  {viewMode === 'schematic' && [
                     [48, 162, 772, 162], [48, 260, 772, 260], [48, 358, 772, 358],
                     [194, 12, 194, MAP_H - 10], [338, 12, 338, MAP_H - 10],
                     [482, 12, 482, MAP_H - 10], [580, 12, 580, MAP_H - 10],
@@ -247,7 +262,7 @@ export default function CampusMap() {
                     const cx = b.x + b.w / 2, cy = b.y + b.h / 2;
                     const isPark = b.id.startsWith('parking');
 
-                    if (isPark) return (
+                    if (isPark) return viewMode === 'satellite' ? null : (
                       <rect key={b.id} x={b.x} y={b.y} width={b.w} height={b.h} rx="3"
                         fill="#1e293b" stroke="#334155" strokeWidth="0.75"
                         style={{ cursor: 'pointer' }}
@@ -255,20 +270,23 @@ export default function CampusMap() {
                       />
                     );
 
+                    const satFill = lit ? b.color + '60' : b.color + '30';
+                    const schemFill = lit ? b.color + '38' : b.color + '22';
+
                     return (
                       <g key={b.id}
-                        filter={lit ? 'url(#bldg-glow)' : 'url(#bldg-shadow)'}
+                        filter={lit ? 'url(#bldg-glow)' : viewMode === 'schematic' ? 'url(#bldg-shadow)' : undefined}
                         style={{ cursor: 'pointer' }}
                         onClick={() => handleBuildingClick(b)}>
                         {b.shape === 'oval' ? (
                           <ellipse cx={cx} cy={cy} rx={b.w / 2} ry={b.h / 2}
-                            fill={lit ? b.color + '35' : b.color + '20'}
+                            fill={viewMode === 'satellite' ? satFill : (lit ? b.color + '35' : b.color + '20')}
                             stroke={b.color} strokeWidth={lit ? 2.5 : 1.5}
                             strokeDasharray={lit ? undefined : '5 3'} />
                         ) : (
                           <>
                             <rect x={b.x} y={b.y} width={b.w} height={b.h} rx="7"
-                              fill={lit ? b.color + '38' : b.color + '22'}
+                              fill={viewMode === 'satellite' ? satFill : schemFill}
                               stroke={b.color} strokeWidth={lit ? 2.5 : 1.5} />
                             {lit && (
                               <rect x={b.x - 4} y={b.y - 4} width={b.w + 8} height={b.h + 8} rx="11"

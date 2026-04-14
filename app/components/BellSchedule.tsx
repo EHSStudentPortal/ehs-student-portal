@@ -310,7 +310,7 @@ function BetweenPeriodsCard({ nextPeriod }: { nextPeriod: Period | null }) {
           School day complete!
         </div>
         <p className="font-dm-sans text-sm" style={{ color: 'var(--text-muted)' }}>
-          See you tomorrow, Shamrocks!
+          See you tomorrow, Aeronauts!
         </p>
       </div>
     );
